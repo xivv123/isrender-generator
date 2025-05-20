@@ -1,0 +1,42 @@
+{
+  "name": "isrender",
+  "version": "1.1.6",
+  "description": "一个基于 Vue 的高度可配置表单生成组件",
+  "main": "dist/isrender.umd.js",
+  "module": "dist/isrender.esm.js",
+  "unpkg": "dist/isrender.umd.min.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "slots/*",
+    "*.js",
+    "*.vue"
+  ],
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name isrender ./index.js"
+  },
+  "keywords": [
+    "vue",
+    "form",
+    "form-generator",
+    "element-ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "element-ui": "^2.15.0",
+    "vue": "^2.6.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0"
+  }
+}

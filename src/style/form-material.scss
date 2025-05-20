@@ -1,0 +1,211 @@
+.form-material {
+  display: flex;
+  height: 100%;
+
+  .side-menu {
+    width: 48px;
+    height: 100%;
+    background: #fff;
+    border-right: 1px solid #e4e7ed;
+
+    .menu-items {
+      padding: 8px 0;
+
+      .menu-item {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #606266;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          color: #409EFF;
+
+          .menu-tooltip {
+            display: block;
+          }
+        }
+
+        &.active {
+          color: #409EFF;
+          border-left: 2px solid #409EFF;
+          background: #ecf5ff;
+        }
+
+        i {
+          font-size: 20px;
+        }
+
+        .menu-tooltip {
+          display: none;
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #fff;
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+          white-space: nowrap;
+          z-index: 100;
+          margin-left: 4px;
+          box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+          border: 1px solid #e4e7ed;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 4px solid transparent;
+            border-right-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .component-panel {
+    width: 240px;
+    background: #fff;
+    border-right: 1px solid #e4e7ed;
+    display: flex;
+    flex-direction: column;
+
+    .panel-header {
+      padding: 8px 16px;
+      font-size: 13px;
+      color: #303133;
+      background: #fff;
+      border-bottom: 1px solid #e4e7ed;
+      font-weight: 500;
+    }
+
+    .panel-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px 0;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(144, 147, 153, 0.3);
+        border-radius: 4px;
+
+        &:hover {
+          background: rgba(144, 147, 153, 0.5);
+        }
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &:hover::-webkit-scrollbar-thumb {
+        background: rgba(144, 147, 153, 0.5);
+      }
+
+      .component-section {
+        .section-header {
+          padding: 8px 16px;
+          color: #606266;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+
+          &:hover {
+            color: #409EFF;
+          }
+
+          i {
+            margin-right: 8px;
+            font-size: 12px;
+          }
+        }
+
+        .section-content {
+          padding: 8px;
+        }
+      }
+
+      .components-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 12px;
+        gap: 12px;
+
+        .component-item {
+          width: calc(50% - 6px);
+          height: 90px;
+          padding: 0;
+          border: 1px solid #e4e7ed;
+          border-radius: 4px;
+          background: #fff;
+          cursor: move;
+          user-select: none;
+          position: relative;
+          transition: all 0.2s;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            font-size: 24px;
+            color: #409EFF;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+          }
+
+          span {
+            font-size: 13px;
+            color: #606266;
+            transition: all 0.2s;
+          }
+
+          .component-count {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            min-width: 18px;
+            height: 18px;
+            padding: 0 5px;
+            background: #409EFF;
+            border-radius: 9px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+          }
+
+          &:hover {
+            border-color: #409EFF;
+            background: #ecf5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            i {
+              transform: scale(1.1);
+            }
+
+            span {
+              color: #409EFF;
+            }
+          }
+
+          &.dragging {
+            opacity: 0.6;
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}

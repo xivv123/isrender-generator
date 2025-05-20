@@ -1,0 +1,209 @@
+.form-material {
+  display: flex;
+  height: 100%;
+}
+
+.form-material .side-menu {
+  width: 48px;
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid #e4e7ed;
+}
+
+.form-material .side-menu .menu-items {
+  padding: 8px 0;
+}
+
+.form-material .side-menu .menu-items .menu-item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #606266;
+  cursor: pointer;
+  position: relative;
+}
+
+.form-material .side-menu .menu-items .menu-item:hover {
+  color: #409EFF;
+}
+
+.form-material .side-menu .menu-items .menu-item:hover .menu-tooltip {
+  display: block;
+}
+
+.form-material .side-menu .menu-items .menu-item.active {
+  color: #409EFF;
+  border-left: 2px solid #409EFF;
+  background: #ecf5ff;
+}
+
+.form-material .side-menu .menu-items .menu-item i {
+  font-size: 20px;
+}
+
+.form-material .side-menu .menu-items .menu-item .menu-tooltip {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100;
+  margin-left: 4px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e4e7ed;
+}
+
+.form-material .side-menu .menu-items .menu-item .menu-tooltip::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 4px solid transparent;
+  border-right-color: #fff;
+}
+
+.form-material .component-panel {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e4e7ed;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-material .component-panel .panel-header {
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #303133;
+  background: #fff;
+  border-bottom: 1px solid #e4e7ed;
+  font-weight: 500;
+}
+
+.form-material .component-panel .panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.form-material .component-panel .panel-content::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.form-material .component-panel .panel-content::-webkit-scrollbar-thumb {
+  background: rgba(144, 147, 153, 0.3);
+  border-radius: 4px;
+}
+
+.form-material .component-panel .panel-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(144, 147, 153, 0.5);
+}
+
+.form-material .component-panel .panel-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.form-material .component-panel .panel-content:hover::-webkit-scrollbar-thumb {
+  background: rgba(144, 147, 153, 0.5);
+}
+
+.form-material .component-panel .panel-content .component-section .section-header {
+  padding: 8px 16px;
+  color: #606266;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.form-material .component-panel .panel-content .component-section .section-header:hover {
+  color: #409EFF;
+}
+
+.form-material .component-panel .panel-content .component-section .section-header i {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.form-material .component-panel .panel-content .component-section .section-content {
+  padding: 8px;
+}
+
+.form-material .component-panel .panel-content .components-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  gap: 12px;
+}
+
+.form-material .component-panel .panel-content .components-list .component-item {
+  width: calc(50% - 6px);
+  height: 90px;
+  padding: 0;
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background: #fff;
+  cursor: move;
+  user-select: none;
+  position: relative;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-material .component-panel .panel-content .components-list .component-item i {
+  font-size: 24px;
+  color: #409EFF;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.form-material .component-panel .panel-content .components-list .component-item span {
+  font-size: 13px;
+  color: #606266;
+  transition: all 0.2s;
+}
+
+.form-material .component-panel .panel-content .components-list .component-item .component-count {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: #409EFF;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.form-material .component-panel .panel-content .components-list .component-item:hover {
+  border-color: #409EFF;
+  background: #ecf5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-material .component-panel .panel-content .components-list .component-item:hover i {
+  transform: scale(1.1);
+}
+
+.form-material .component-panel .panel-content .components-list .component-item:hover span {
+  color: #409EFF;
+}
+
+.form-material .component-panel .panel-content .components-list .component-item.dragging {
+  opacity: 0.6;
+  transform: scale(0.95);
+}

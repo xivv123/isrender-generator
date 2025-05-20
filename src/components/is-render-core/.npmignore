@@ -1,0 +1,60 @@
+# 排除目录
+node_modules/
+examples/
+public/
+tests/
+docs/
+
+# 排除文件类型
+*.log
+*.md
+!README.md
+.DS_Store
+.editorconfig
+.eslintrc.js
+.eslintignore
+.gitignore
+.browserslistrc
+.prettierrc
+*.map
+
+# 排除特定文件
+vue.config.js
+babel.config.js
+jsconfig.json
+tsconfig.json
+yarn.lock
+package-lock.json
+
+# 允许的文件
+!dist/
+!index.js
+!utils/
+!slots/
+!*.vue
+!render*.js
+!layouts*.js
+!jsx-parser.js
+
+# 构建过程中间文件
+/cache
+
+# 环境配置
+.env
+.env.local
+.env.*.local
+
+# 编辑器目录和文件
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 测试
+/coverage
+
+# 本地配置
+vue.config.local.js 
